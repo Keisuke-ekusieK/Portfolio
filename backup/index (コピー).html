@@ -1,0 +1,258 @@
+<!DOCTYPE html5>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+
+    <link rel="stylesheet" href="css/custom-style.css">
+</head>
+<body>
+    <header class="my-header bg-dark w-100 position-fixed">
+        <div class="container-xl h-100 d-flex flex-wrap justify-content-between align-items-center">
+            <a href=""><img class="my-logo" src="images/icon.jpg"></a>
+            <nav class="align-middle pt-3">
+                <ul class="d-flex flex-wrap list-unstyled my-nav">
+                    <li><a href="#id-about">About</a></li>
+                    <li class="ml-4"><a href="#id-skills">Skills</a></li>
+                    <li class="ml-4"><a href="#id-works">Works</a></li>
+                    <li class="ml-4"><a href="#id-contact">Contact</a></li>
+                    <li class="ml-4"><a href="#i"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-xl my-about">
+        <div class="container pt-3 pb-5">
+            <p class="my-title text-center text-white">About</p>
+            <div class="my-profile ml-lg-5 px-3 py-5">
+                <p class="my-name">あかり <br class="d-md-none">/ Webエンジニア</p>
+                <p class="my-base-font">
+                    1992年　京都市生まれ滋賀県大津市育ち<br>
+                    大学院修士課程を修了後、会社員として働く<br>
+                    リベ大両学長と出会い、HP制作とコーディングの副業を行う<br>
+                    趣味はテニス・ランニング・自然満喫旅行
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <main class="bg-secondary">
+        <p class="my-title text-center">Skills</p>
+        <div class="d-flex flex-wrap mx-auto">
+            <div class="my-skill-card">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <p class="my-skill-font">HTML<br>&CSS</p>
+                    </div>
+                </div>
+                <p class="my-base-font">経験年数：2ヶ月</p>
+            </div>
+            <div class="my-skill-card">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <p class="my-skill-font">Sass</p>
+                    </div>
+                </div>
+                <p class="my-base-font">経験年数：2ヶ月</p>
+            </div>
+            <div class="my-skill-card">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <p class="my-skill-font">Bootstrap</p>
+                    </div>
+                </div>
+                <p class="my-base-font">経験年数：2ヶ月</p>
+            </div>
+            <div class="my-skill-card">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <p class="my-skill-font">jQuery</p>
+                    </div>
+                </div>
+                <p class="my-base-font">経験年数：2ヶ月</p>
+            </div>
+            <div class="my-skill-card">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <p class="my-skill-font">PHP</p>
+                    </div>
+                </div>
+                <p class="my-base-font">経験年数：2ヶ月</p>
+            </div>
+            <div class="my-skill-card">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <p class="my-skill-font">WordPress</p>
+                    </div>
+                </div>
+                <p class="my-base-font">経験年数：2ヶ月</p>
+            </div>
+        </div>
+    </main>
+    <main class="container-xl bg-primary">
+        <p class="my-title text-center">Works</p>
+        <div id="my-carousel-wrap" class="w-100 d-flex flex-wrap justify-content-around align-items-center">
+            <p id="my-carousel-prev" class="ml-3"><i class="fas fa-chevron-left"></i></p>
+            <div class="w-75 mx-auto bg-white" id="my-carousel">     
+                <div class="h-100 bg-success d-flex flex-wrap" id="my-carousel-inner">
+                    <a class="my-carousel-card d-block mx-0 px-1 h-100" href="#">
+                        <img class="w-100 h-75 my-carousel-img" src="images/akari.jpg" alt="..." >
+                        <p class="my-carousel-copy text-dark">中心記事一覧ページのレイアウト</p>
+                    </a>
+                    <a class="my-carousel-card d-block mx-0 px-1 h-100" href="#">
+                        <img class="w-100 h-75 my-carousel-img" src="images/akari.jpg" alt="..." >
+                        <p class="my-carousel-copy text-dark">先頭固定表示</p>
+                    </a>
+                    <a class="my-carousel-card d-block mx-0 px-1 h-100" href="#">
+                        <img class="w-100 h-75 my-carousel-img" src="images/akari.jpg" alt="...">
+                        <p class="my-carousel-copy text-dark">Twitterソーシャルボタンに「@ユーザー名」を追加したい</p>
+                    </a>
+                    <a class="my-carousel-card d-block mx-0 px-1 h-100" href="#">
+                        <img class="w-100 h-75 my-carousel-img" src="images/akari.jpg" alt="..." >
+                        <p class="my-carousel-copy text-dark">固定ページ</p>
+                    </a>
+                    <a class="my-carousel-card d-block mx-0 px-1 h-100" href="#">
+                        <img class="w-100 h-75 my-carousel-img" src="images/akari.jpg" alt="..." >
+                        <p class="my-carousel-copy text-dark">ワンカラムa固定ページ</p>
+                    </a>
+                    <a class="my-carousel-card d-block mx-0 px-1 h-100" href="#">
+                        <img class="w-100 h-75 my-carousel-img" src="images/akari.jpg" alt="..." >
+                        <p class="my-carousel-copy text-dark">ワンカラム</p>
+                    </a>
+                </div>
+            </div>
+            <p id="my-carousel-next" class="mr-3"><i class="fas fa-chevron-right"></i></p>
+        </div>
+        <ul class="mx-auto w-100 d-flex justify-content-center mt-3" id="my-carousel-pagination">
+            <li><a class="mr-2 active"></a></li>
+            <li><a class="mx-2"></a></li>
+            <li><a class="mx-2"></a></li>
+            <li><a class="mx-2"></a></li>
+            <li><a class="mx-2"></a></li>
+            <li><a class="ml-2 mr-5"></a></li>
+          </ul>
+        <a class="my-base-font text-dark " href="#">実績一覧へ</a>
+    </main>
+
+    <main class="bg-secondary">
+        <p class="my-title text-center">Contact</p>
+        <div class="my-contact-forms mx-auto">
+            <div class="my-contact-item mx-auto">
+                <label class="my-contact-label my-base-font" for="id-name">名前：</label>
+                <input class="my-contact-input my-base-font" id="id-name" type="text" name="yourname">
+            </div>
+            <div class="my-contact-item mx-auto">
+                <label class="my-contact-label my-base-font" for="id-title">件名：</label>
+                <input class="my-contact-input my-base-font" id="id-title" type="text" name="yourname">
+            </div>
+            <div class="my-contact-item mx-auto">
+                <label class="my-contact-label my-base-font" for="id-address">メールアドレス：</label>
+                <input class="my-contact-input my-base-font" id="id-address" type="email" name="mail">
+            </div>
+            <div class="my-contact-item mx-auto">
+                <label class="my-contact-label my-base-font" for="id-comment">本文：</label>
+                <textarea class="my-contact-input my-base-font" id="id-comment" name="comment"></textarea>
+            </div>
+            <div class="my-contact-item text-center w-100">
+                <input class="my-contact-btn my-base-font" type="submit" value="送信する">
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-xl">
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="./JS/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(()=>{
+            //初期設定
+            $("#my-carousel-inner").css("width", $(".my-carousel-card").width()*$("#my-carousel-inner a.my-carousel-card").length+"px");
+            $("#my-carousel-inner a.my-carousel-card:last-child").prependTo("#my-carousel-inner");
+            $("#my-carousel-inner a.my-carousel-card:last-child").prependTo("#my-carousel-inner");
+            $("#my-carousel-inner").css("margin-left",-1*$(".my-carousel-card").width()+"px");
+            //戻るボタン
+            $("#my-carousel-prev").on("click", ()=>{
+                $("#my-carousel-next", "#my-carousel-prev").hide();
+                //最初の子要素であれば最後の子要素にactive状態が遷移
+                //最初の子要素以外であればその前要素にactive状態が遷移
+                if ($("ul#my-carousel-pagination li a").filter(".active").parent().index() != 0) {
+                    $("ul#my-carousel-pagination li a").filter(".active").removeClass("active")
+                    .parent().prev().children().addClass("active");
+                } else {
+                    $("ul#my-carousel-pagination li:first-child a").removeClass("active");
+                    $("ul#my-carousel-pagination li:last-child a").addClass("active");
+                };
+                $("#my-carousel-inner").animate({
+                    marginLeft:parseInt($("#my-carousel-inner").css("margin-left"))+$("#my-carousel-inner a.my-carousel-card").width()+"px"
+                },"normal","swing",()=>{
+                    $("#my-carousel-inner").css("margin-left",parseInt($("#my-carousel-inner").css("margin-left"))-$(".my-carousel-card").width()+"px");
+                    $("#my-carousel-inner a.my-carousel-card:last-child").prependTo("#my-carousel-inner");
+                    $("#my-carousel-next", "#my-carousel-prev").show();
+                });
+            });
+            //進むボタン
+            $("#my-carousel-next").on("click", ()=>{
+                $("#my-carousel-next", "#my-carousel-prev").hide();
+                //最初の子要素であれば最後の子要素にactive状態が遷移
+                //最初の子要素以外であればその前要素にactive状態が遷移
+                if ($("ul#my-carousel-pagination li a").filter(".active").parent().index() != 8) {
+                    $("ul#my-carousel-pagination li a").filter(".active").removeClass("active")
+                    .parent().next().children().addClass("active");
+                } else {
+                    $("ul#my-carousel-pagination li:last-child a").removeClass("active");
+                    $("ul#my-carousel-pagination li:first-child a").addClass("active");
+                };
+                $("#my-carousel-inner").animate({
+                    marginLeft:parseInt($("#my-carousel-inner").css("margin-left"))-$(".my-carousel-card").width()+"px"
+                },"normal","swing",()=>{
+                    $("#my-carousel-inner").css("margin-left", parseInt($("#my-carousel-inner").css("margin-left"))+$(".my-carousel-card").width()+"px");
+                    $("#my-carousel-inner a.my-carousel-card:first-child").appendTo("#my-carousel-inner");
+                    $("#my-carousel-next", "#my-carousel-prev").show();
+                });
+            });
+            //ページネーション
+            $("ul#my-carousel-pagination li a").on("click", function(){
+            $("#my-carousel-next", "#my-carousel-prev").hide();
+            const i = $(this).parent().index() - $("ul#my-carousel-pagination li a").filter(".active").parent().index();
+            if (i > 0) {
+                for (let j=0; j<i; j++){
+                    $("#my-carousel-inner").animate({
+                        marginLeft:parseInt($("#my-carousel-inner").css("margin-left"))-$(".my-carousel-card").width()+"px"
+                    },150,"swing",()=>{
+                        $("#my-carousel-inner").css("margin-left", parseInt($("#my-carousel-inner").css("margin-left"))+$(".my-carousel-card").width()+"px");
+                        $("#my-carousel-inner a.my-carousel-card:first-child").appendTo("#my-carousel-inner");
+                        $("#my-carousel-next", "#my-carousel-prev").show();
+                    });
+                }
+            } else if (i < 0) {
+                for (let j=0; i<j; j--){
+                    $("#my-carousel-inner").animate({
+                        marginLeft:parseInt($("#my-carousel-inner").css("margin-left"))+$(".my-carousel-card").width()+"px"
+                    },150,"swing",()=>{
+                        $("#my-carousel-inner").css("margin-left",parseInt($("#my-carousel-inner").css("margin-left"))-$(".my-carousel-card").width()+"px");
+                        $("#my-carousel-inner a.my-carousel-card:last-child").prependTo("#my-carousel-inner");
+                        $("#my-carousel-next", "#my-carousel-prev").show();
+                    });
+                }
+            };
+            $("#my-carousel-next", "#my-carousel-prev").show();
+
+            //アクティブ状態の遷移
+            $(this).parent().siblings().children().removeClass("active");
+            $(this).addClass("active");
+            });
+        });
+      </script>
+</body>
+</html>

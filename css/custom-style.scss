@@ -1,0 +1,878 @@
+// font-familyの指定
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica", "游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+$font-family-monospace: SourceHanCodeJP-Regular, "Ricty Diminished", "fontSourceCodeVariable-Roman", "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-cursive: "Concert One", cursive;
+
+// bootstrapのカスタム
+$font-size-base:              1.6rem !default; // Assumes the browser default, 
+
+// Links
+//
+// Style anchor elements.
+$link-hover-decoration:                   none !important;
+
+$theme-colors: (
+    "primary":#47763c,
+    "secondary":black,
+    "success":#dfcba5,
+    "warning":#f9e900,
+    "danger":#f1e2be,
+);
+
+
+// 自分
+//共通部分
+#my-effect-fade {
+    opacity : 0;
+    visibility: hidden;
+    transform : translate(0, 60px);
+    transition : all 1s;
+}
+    
+#my-effect-fade.my-effect-scrollin {
+    opacity : 1;
+    visibility: visible;
+    transform : translate(0, 0);
+}
+
+.my-title {
+    font-family: $font-family-sans-serif;
+    @media screen and (min-width:767px){
+        font-size:40px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:30px;
+        font-weight:500;
+    }
+}
+
+.my-subtitle {
+    font-family: $font-family-sans-serif;
+    @media screen and (min-width:767px){
+        font-size:20px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:16px;
+        font-weight:500;
+    }
+}
+
+.my-base-font {
+    font-family: $font-family-sans-serif;
+    @media screen and (min-width:767px){
+        font-size:16px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:14px;
+        font-weight:500;
+    }
+}
+
+.js-fadein {
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(60px);
+    transition: all 2s;
+  }
+  .js-fadein.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+
+// header
+#global-navi {
+    background:#dfcba5;
+    position: fixed;
+    top: 0;
+    left: 0px;//right
+    width: 100%;
+    z-index:200;
+    opacity:0.9;
+}
+#wrapper nav ul li{
+    display:inline-block;
+    font-size: 16px;
+    padding:  30px 20px 25px 28px;
+}
+#wrapper nav ul li a{
+    color: #ddd;
+}
+/*スマホ画面で例１のハンバーガーメニューの形にする*/
+@media screen and (max-width: 767px) {
+    #wrapper nav {
+        position: fixed;
+        top: 0;
+        left: -300px;//right:-300px
+        width: 300px;
+        height: 100%;
+        padding-top: 50px;
+        background:#dfcba5;
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 2;
+        opacity:0.9;
+    }
+    #wrapper nav ul li {
+        display:block;
+        padding: 20px 28px
+    }
+    
+    #wrapper nav ul li a {
+        text-decoration: none;
+        color: #ddd;
+    }
+    
+    #wrapper .btn-gnavi {
+        position: fixed;
+        top: 20px;
+        left: 20px;//right
+        width: 30px;
+        height: 24px;
+        z-index: 3;
+        box-sizing: border-box;
+        cursor: pointer;
+        -webkit-transition: all 400ms;
+        transition: all 400ms
+    }
+    
+    #wrapper .btn-gnavi span {
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background: #444;
+        border-radius: 10px;
+        -webkit-transition: all 400ms;
+        transition: all 400ms
+    }
+    
+    #wrapper .btn-gnavi span:nth-child(1) {
+        top: 0
+    }
+    
+    #wrapper .btn-gnavi span:nth-child(2) {
+        top: 12px
+    }
+    
+    #wrapper .btn-gnavi span:nth-child(3) {
+        top: 24px
+    }
+    
+    #wrapper .btn-gnavi.open {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+    
+    #wrapper .btn-gnavi.open span {
+        background: #fff
+    }
+    
+    #wrapper .btn-gnavi.open span {
+        width: 40px;
+    }
+    #wrapper .contents section p {
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        line-height: 1.4;
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 6px #666;
+    }
+    
+    #wrapper .contents section:nth-child(odd) p {
+        left: 10%
+    }
+    
+    #wrapper .contents section:nth-child(even) p {
+        right: 10%
+    }
+}
+
+
+//profile
+main {
+    padding-top:100px;
+}
+
+.my-about {
+    height:600px;
+    background:#ddd url("../images/me.jpg") no-repeat 90% 60%;
+    background-size:cover;
+}
+
+.my-about-before::before {
+    font-family: "Font Awesome 5 Free";
+    content:"\f406";
+    font-weight: 900;
+    margin-right:10px;
+}
+
+.my-profile {
+    width:60%;
+    min-width:250px;
+    max-width:450px;
+    background-color:white;
+    opacity:0.7;
+}
+
+// concept
+.my-concept-before::before {
+    font-family: "Font Awesome 5 Free";
+    content:"\f3ed";
+    font-weight: 900;
+    margin-right:10px;
+}
+
+.my-concept-title {
+    font-family: $font-family-sans-serif;
+    border-left:10px solid #666;
+    background-color:rgba(255,252,230,250);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    @media screen and (min-width:767px){
+        font-size:30px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:20px;
+        font-weight:500;
+    }
+}
+
+.my-concept-subtitle {
+    font-family: $font-family-sans-serif;
+    width:300px;
+    @media screen and (min-width:767px){
+        font-size:24px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:18px;
+        font-weight:500;
+    }
+    &:before {
+        font-family: "Font Awesome 5 Free";
+        content:"\f00c";
+        color:black;
+        font-weight: 900;
+        margin-right:5px;
+    }
+}
+
+
+// skills
+.my-skills-before::before {
+    font-family: "Font Awesome 5 Free";
+    content:"\f304";
+    font-weight: 900;
+    margin-right:10px;
+}
+
+.my-circle-html {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #47763c;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: right 75px;
+        z-index: 2;
+        animation: rotate-circle-left-html 2s linear forwards;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: left 75px;
+        z-index: 3;
+        animation: rotate-circle-right-html 2s linear forwards;
+    }
+}
+
+.my-circle-sass {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background:#47763c;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: right 75px;
+        z-index: 2;
+        animation: rotate-circle-left-sass 2s linear forwards;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: left 75px;
+        z-index: 3;
+        animation: rotate-circle-right-sass 2s linear forwards;
+    }
+}
+
+.my-circle-bootstrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background:#47763c;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: right 75px;
+        z-index: 2;
+        animation: rotate-circle-left-bootstrap 2s linear forwards;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: left 75px;
+        z-index: 3;
+        animation: rotate-circle-right-bootstrap 2s linear forwards;
+    }
+}
+
+.my-circle-jquery {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #94c674;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: right 75px;
+        z-index: 2;
+        animation: rotate-circle-left-jquery 2s linear forwards;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: left 75px;
+        z-index: 3;
+        animation: rotate-circle-right-jquery 2s linear forwards;
+    }
+}
+
+.my-circle-php {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #94c674;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: right 75px;
+        z-index: 2;
+        animation: rotate-circle-left-php 2s linear forwards;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: left 75px;
+        z-index: 3;
+        animation: rotate-circle-right-php 2s linear forwards;
+    }
+}
+
+.my-circle-wordpress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #94c674;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: right 75px;
+        z-index: 2;
+        animation: rotate-circle-left-wordpress 2s linear forwards;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        width: 150px;
+        height: 150px;
+        background: #ccc;
+        transform-origin: left 75px;
+        z-index: 3;
+        animation: rotate-circle-right-wordpress 2s linear forwards;
+    }
+}
+
+.my-circle-html .my-circle-inner-html {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height:120px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.my-circle-sass .my-circle-inner-sass {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height:120px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.my-circle-bootstrap .my-circle-inner-bootstrap {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height:120px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.my-circle-jquery .my-circle-inner-jquery {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height:120px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.my-circle-php .my-circle-inner-php {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height:120px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.my-circle-wordpress .my-circle-inner-wordpress {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height:120px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+@keyframes rotate-circle-right-html {
+    0%   {
+        transform: rotate(0deg);
+        background: #ccc;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #ccc;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background:#47763c;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #47763c;
+    }
+}
+
+@keyframes rotate-circle-left-html {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    80% { transform: rotate(144deg); }
+    100% { transform: rotate(144deg); }
+}
+
+@keyframes rotate-circle-right-sass {
+    0%   {
+        transform: rotate(0deg);
+        background: #ccc;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #ccc;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background: #47763c;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #47763c;
+    }
+}
+
+@keyframes rotate-circle-left-sass {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(108deg); }
+}
+
+@keyframes rotate-circle-right-bootstrap {
+    0%   {
+        transform: rotate(0deg);
+        background: #ccc;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #ccc;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background:#47763c;
+    }
+    100% {
+        transform: rotate(360deg);
+        background:#47763c;
+    }
+}
+
+@keyframes rotate-circle-left-bootstrap {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(108deg); }
+}
+
+@keyframes rotate-circle-right-jquery {
+    0%   {
+        transform: rotate(0deg);
+        background: #ccc;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #ccc;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background: #94c674;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #94c674;
+    }
+}
+
+@keyframes rotate-circle-left-jquery {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(36deg); }
+}
+
+@keyframes rotate-circle-right-php {
+    0%   {
+        transform: rotate(0deg);
+        background: #ccc;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #ccc;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background: #94c674;
+    }
+    100% {
+        transform: rotate(360deg);
+        background:#94c674;
+    }
+}
+
+@keyframes rotate-circle-left-php {
+    0%   { transform: rotate(0deg); }
+    50%   { transform: rotate(0deg); }
+    100%  { transform: rotate(0deg); }
+}
+
+@keyframes rotate-circle-right-wordpress {
+    0%   {
+        transform: rotate(0deg);
+        background: #ccc;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #ccc;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background: #94c674;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #94c674;
+    }
+}
+
+@keyframes rotate-circle-left-wordpress {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.my-skill-font {
+    font-family: $font-family-sans-serif;
+    
+    @media screen and (min-width:767px){
+        font-size:24px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:20px;
+        font-weight:500;
+    }
+}
+
+.my-gauge {
+    font-family: $font-family-sans-serif;
+    font-size:32px;
+}
+
+// Works
+.my-works-before::before {
+    font-family: "Font Awesome 5 Free";
+    content:"\f1c9";
+    font-weight: 900;
+    margin-right:10px;
+}
+
+.my-carousel-card {
+    max-width:250px;
+    max-height:100px;
+    width:30vw;
+}
+
+.my-carousel-img {
+    object-fit:cover;
+}
+
+.my-carousel-copy {
+    font-size:12px;
+    font-family:$font-family-sans-serif;
+    font-weight:700;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .prev-arrow {
+    left: -50;
+    top: 70;
+    z-index: 50;
+  }
+  .next-arrow {
+    right: -50;
+    top: 70;
+    z-index: 50;
+  }
+
+// contact
+.my-contact-before::before {
+    font-family: "Font Awesome 5 Free";
+    content:"\f0e0";
+    font-weight: 900;
+    margin-right:10px;
+}
+
+.my-contact-label {
+    max-width:180px;
+    @media screen and (min-width:768px){
+        width:25%;
+    }
+    @media screen and (max-width:767px){
+        width:100%;
+    }
+}
+
+.my-contact-label2 {
+    max-width:180px;
+    @media screen and (min-width:768px){
+        width:25%;
+    }
+    @media screen and (max-width:767px){
+        width:100%;
+    }
+}
+
+.my-contact-input {
+    max-width:700px;
+    @media screen and (min-width:768px){
+        width:70%;
+    }
+    @media screen and (max-width:767px){
+        width:100%;
+    }
+}
+
+.my-contact-label::before {
+    content:"必須";
+    width:30px;
+    color:white;
+    background-color:black;
+    font-size:12px;
+    font-family:$font-family-sans-serif;
+    font-weight:700;
+    margin-right:10px;
+    padding:5px 10px;
+    border-radius:2px;
+}
+
+.my-contact-btn {
+    border-radius:5px;
+}
+
+/* Importするbootstrapライブラリの指定 */
+// Required
+@import "/home/akari/node_modules/bootstrap/scss/functions";
+@import "/home/akari/node_modules/bootstrap/scss/variables";
+@import "/home/akari/node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "/home/akari/node_modules/bootstrap/scss/root";
+@import "/home/akari/node_modules/bootstrap/scss/reboot";
+@import "/home/akari/node_modules/bootstrap/scss/type";
+@import "/home/akari/node_modules/bootstrap/scss/images";
+//@import "/home/akari/node_modules/bootstrap/scss/code";
+@import "/home/akari/node_modules/bootstrap/scss/grid";
+//@import "/home/akari/node_modules/bootstrap/scss/tables";
+@import "/home/akari/node_modules/bootstrap/scss/forms";
+@import "/home/akari/node_modules/bootstrap/scss/buttons";
+@import "/home/akari/node_modules/bootstrap/scss/transitions";
+@import "/home/akari/node_modules/bootstrap/scss/dropdown";
+@import "/home/akari/node_modules/bootstrap/scss/button-group";
+@import "/home/akari/node_modules/bootstrap/scss/input-group";
+@import "/home/akari/node_modules/bootstrap/scss/custom-forms";
+@import "/home/akari/node_modules/bootstrap/scss/nav";
+@import "/home/akari/node_modules/bootstrap/scss/navbar";
+@import "/home/akari/node_modules/bootstrap/scss/card";
+//@import "/home/akari/node_modules/bootstrap/scss/breadcrumb";
+//@import "/home/akari/node_modules/bootstrap/scss/pagination";
+//@import "/home/akari/node_modules/bootstrap/scss/badge";
+@import "/home/akari/node_modules/bootstrap/scss/jumbotron";
+//@import "/home/akari/node_modules/bootstrap/scss/alert";
+//@import "/home/akari/node_modules/bootstrap/scss/progress";
+@import "/home/akari/node_modules/bootstrap/scss/media";
+@import "/home/akari/node_modules/bootstrap/scss/list-group";
+//@import "/home/akari/node_modules/bootstrap/scss/close";
+@import "/home/akari/node_modules/bootstrap/scss/modal";
+//@import "/home/akari/node_modules/bootstrap/scss/tooltip";
+//@import "/home/akari/node_modules/bootstrap/scss/popover";
+@import "/home/akari/node_modules/bootstrap/scss/carousel";
+@import "/home/akari/node_modules/bootstrap/scss/utilities";
+//@import "/home/akari/node_modules/bootstrap/scss/print";

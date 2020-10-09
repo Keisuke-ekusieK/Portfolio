@@ -1,0 +1,294 @@
+// font-familyの指定
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica", "游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+$font-family-monospace: SourceHanCodeJP-Regular, "Ricty Diminished", "fontSourceCodeVariable-Roman", "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-cursive: "Concert One", cursive;
+
+// bootstrapのカスタム
+$font-size-base:              1.6rem !default; // Assumes the browser default, 
+
+// Links
+//
+// Style anchor elements.
+$link-hover-decoration:                   none !important;
+
+$theme-colors: (
+    "primary":#f5a500,
+    "secondary":#00aaff,
+    "success":#92cb97,
+    "warning":#f9e900,
+    "danger":#de4d4d,
+);
+
+
+// 自分
+.my-header {
+    height:100px;
+    z-index:100;
+}
+
+.my-logo {
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:50% 35%;
+}
+
+main {
+    padding-top:100px;
+}
+
+.my-about {
+    height:600px;
+    background:#ddd url("../images/me.jpg") no-repeat 90% 60%;
+    background-size:cover;
+}
+
+.my-profile {
+    width:60%;
+    min-width:250px;
+    max-width:450px;
+    background-color:white;
+    opacity:0.6;
+}
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 150px;
+    height: 150px;
+    background: #999;
+    transform-origin: right 60px;
+    z-index: 2;
+    animation: rotate-circle-left 2s linear forwards;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 150px;
+    height: 150px;
+    background: #999;
+    transform-origin: left 60px;
+    z-index: 3;
+    animation: rotate-circle-right 2s linear forwards;
+}
+
+.circle .circle-inner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height:130px;
+    padding-top: 38px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+@keyframes rotate-circle-right {
+    0%   {
+        transform: rotate(0deg);
+        background: #999;
+    }
+    50%  {
+        transform: rotate(180deg);
+        background: #999;
+    }
+    50.01% {
+        transform: rotate(360deg);
+        background: #333;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: #333;
+    }
+}
+
+@keyframes rotate-circle-left {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+
+.my-title {
+    font-family: $font-family-sans-serif;
+    @media screen and (min-width:767px){
+        font-size:40px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:30px;
+        font-weight:500;
+    }
+}
+
+.my-base-font {
+    font-family: $font-family-sans-serif;
+    @media screen and (min-width:767px){
+        font-size:16px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:14px;
+        font-weight:500;
+    }
+}
+
+.my-skill-font {
+    font-family: $font-family-sans-serif;
+    @media screen and (min-width:767px){
+        font-size:24px;
+        font-weight:400;
+    }
+    @media screen and (max-width:766px){
+        font-size:20px;
+        font-weight:500;
+    }
+}
+
+.my-contact-item {
+    width:900px;
+}
+
+.my-contact-label {
+    width:200px;
+}
+
+.my-contact-input {
+    width:600px;
+}
+
+.my-contact-btn {
+    width:200px;
+    height:60px;
+    border-radius:2px;
+}
+
+#my-carousel-wrap {
+    //margin:calc(17% + 150px) auto 0 auto;
+    //padding: 10px;
+    overflow:visible;
+    max-height:250px;
+    @media screen and (min-width:767px){
+        height:25vw;
+    }
+    @media screen and (max-width:766px){
+        height:30vw;
+    }
+}
+
+#my-carousel {
+    overflow:hidden;
+}
+
+#my-carousel-prev {
+    cursor:pointer;
+}
+
+#my-carousel-next {
+    cursor:pointer;
+}
+
+.my-carousel-card {
+    //max-width:250px;
+    width:45vw;
+    //@media screen and (min-width:767px){}
+
+}
+
+.my-carousel-img {
+    object-fit:cover;
+}
+
+.my-carousel-copy {
+    font-size:12px;
+    font-family:$font-family-sans-serif;
+    font-weight:700;
+}
+
+ul#my-carousel-pagination {
+    list-style-type:none;
+}
+
+ul#my-carousel-pagination li>a {
+    text-decoration:none;
+    display:block;
+    width:0px;
+    padding-left:1rem;
+}
+
+ul#my-carousel-pagination li>a::before {
+  content: "";
+  background-color: gray;
+  display:block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  padding:0;
+  margin:0;
+}
+
+ul#my-carousel-pagination li>a.active::before {
+    background-color: black;
+}
+
+
+
+/* Importするbootstrapライブラリの指定 */
+// Required
+@import "/home/akari/node_modules/bootstrap/scss/functions";
+@import "/home/akari/node_modules/bootstrap/scss/variables";
+@import "/home/akari/node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "/home/akari/node_modules/bootstrap/scss/root";
+@import "/home/akari/node_modules/bootstrap/scss/reboot";
+@import "/home/akari/node_modules/bootstrap/scss/type";
+@import "/home/akari/node_modules/bootstrap/scss/images";
+//@import "/home/akari/node_modules/bootstrap/scss/code";
+@import "/home/akari/node_modules/bootstrap/scss/grid";
+//@import "/home/akari/node_modules/bootstrap/scss/tables";
+@import "/home/akari/node_modules/bootstrap/scss/forms";
+@import "/home/akari/node_modules/bootstrap/scss/buttons";
+@import "/home/akari/node_modules/bootstrap/scss/transitions";
+@import "/home/akari/node_modules/bootstrap/scss/dropdown";
+@import "/home/akari/node_modules/bootstrap/scss/button-group";
+@import "/home/akari/node_modules/bootstrap/scss/input-group";
+@import "/home/akari/node_modules/bootstrap/scss/custom-forms";
+@import "/home/akari/node_modules/bootstrap/scss/nav";
+@import "/home/akari/node_modules/bootstrap/scss/navbar";
+@import "/home/akari/node_modules/bootstrap/scss/card";
+//@import "/home/akari/node_modules/bootstrap/scss/breadcrumb";
+//@import "/home/akari/node_modules/bootstrap/scss/pagination";
+//@import "/home/akari/node_modules/bootstrap/scss/badge";
+@import "/home/akari/node_modules/bootstrap/scss/jumbotron";
+//@import "/home/akari/node_modules/bootstrap/scss/alert";
+//@import "/home/akari/node_modules/bootstrap/scss/progress";
+@import "/home/akari/node_modules/bootstrap/scss/media";
+@import "/home/akari/node_modules/bootstrap/scss/list-group";
+//@import "/home/akari/node_modules/bootstrap/scss/close";
+@import "/home/akari/node_modules/bootstrap/scss/modal";
+//@import "/home/akari/node_modules/bootstrap/scss/tooltip";
+//@import "/home/akari/node_modules/bootstrap/scss/popover";
+@import "/home/akari/node_modules/bootstrap/scss/carousel";
+@import "/home/akari/node_modules/bootstrap/scss/utilities";
+//@import "/home/akari/node_modules/bootstrap/scss/print";
